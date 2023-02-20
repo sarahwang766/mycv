@@ -121,7 +121,7 @@ function App() {
           <section className='section-box'>
             <p className='title'> <Divider className='title-before' type='vertical' />个人优势</p>
             <div className='content-text'>
-              <p>1. 一年前端工作经验，熟悉React和Vue前端框架，熟悉ECharts/HTML/CSS/JavaScript等Web前端技术, 了解前端管理和构建工具：git、npm、webpack。<br />2. 具有良好的团队合作精神和强烈的责任意识，善于总结反省。性格活泼开朗，有良好的沟通协作能力，抗压能力强。</p>
+              <p>1. 一年前端工作经验，熟悉React和Vue前端框架，熟悉ECharts/HTML/CSS/JavaScript/TypeScript/Node.js等Web前端技术, 了解前端管理和构建工具：git、npm、webpack。<br />2. 具有良好的团队合作精神和强烈的责任意识，善于总结反省。性格活泼开朗，有良好的沟通协作能力，抗压能力强。</p>
             </div>
           </section>
           <section className='section-box'>
