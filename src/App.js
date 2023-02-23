@@ -29,13 +29,13 @@ function App() {
       job: '前端开发实习生',
       content: '1. 参与互联网医院平台类产品的前端代码开发及维护等相关工作，配合产品经理、UI设计师及后端开发工程师完成应用开发；\n2. 参与前端公共组件库搭建，对项目进行组件化改进；\n3. 协助测试工程师定位问题，修复前端Bug；',
     },
-    {
-      companyName: '北京外企德科人力资源服务上海有限公司',
-      tag: '全职',
-      year: '2021/04-2022/01',
-      job: 'Web前端开发工程师',
-      content: '参与开发和维护华为产品iMaster NCE-Super的前端页面。\n1. 根据产品需求和原型，对前端功能模块进行迭代开发和维护，与后端团队合作实现页面交互效果；\n2. 编写开发文档；\n3. 协助测试工程师制定测试计划，定位并解决前端问题；',
-    },    
+    // {
+    //   companyName: '北京外企德科人力资源服务上海有限公司',
+    //   tag: '全职',
+    //   year: '2021/04-2022/01',
+    //   job: 'Web前端开发工程师',
+    //   content: '参与开发和维护华为产品iMaster NCE-Super的前端页面。\n1. 根据产品需求和原型，对前端功能模块进行迭代开发和维护，与后端团队合作实现页面交互效果；\n2. 编写开发文档；\n3. 协助测试工程师制定测试计划，定位并解决前端问题；',
+    // },    
   ];
 
   const projectList = [
@@ -100,28 +100,33 @@ function App() {
           <section className="Intro">
             <div className="avatar"></div>
             <div className="name-cared-container">
-              <h1 className='name'>王潇晗</h1>
+              <div className='name-phone-mail'>
+                <h1 className='name'>王潇晗</h1>
+                <div className='phone-mail'>
+                  <PhoneOutlined className='s-icon'></PhoneOutlined>
+                  <span className='info-1'>17784682091</span>
+                  <MailOutlined className='s-icon'/>
+                  <span className='info-1'>727379867@qq.com</span>
+                </div>
+              </div>
               <div className='year-bd-degree'>
                 <span>2023年应届生</span>
                 <Divider type='vertical' className='divider-1'></Divider>
-                <span>1年工作经验</span>
-                <Divider type='vertical' className='divider-1'></Divider>
+                {/* <span>1年工作经验</span>
+                <Divider type='vertical' className='divider-1'></Divider> */}
                 <span>1998/11/05</span>
                 <Divider type='vertical' className='divider-1'></Divider>
                 <span>硕士</span>
-              </div>
-              <div className='phone-mail'>
-                <PhoneOutlined className='s-icon'></PhoneOutlined>
-                <span className='info-1'>17784682091</span>
-                <MailOutlined className='s-icon'/>
-                <span className='info-1'>727379867@qq.com</span>
+                <Divider type='vertical' className='divider-1'></Divider>
+                <span>前端开发</span>
               </div>
             </div>
           </section>
           <section className='section-box'>
             <p className='title'> <Divider className='title-before' type='vertical' />个人优势</p>
             <div className='content-text'>
-              <p>1. 一年前端工作经验，熟悉React和Vue前端框架，熟悉ECharts/HTML/CSS/JavaScript/TypeScript/Node.js等Web前端技术, 了解前端管理和构建工具：git、npm、webpack。<br />2. 具有良好的团队合作精神和强烈的责任意识，善于总结反省。性格活泼开朗，有良好的沟通协作能力，抗压能力强。</p>
+              <div className='info-text'>1. 熟悉React和Vue前端框架，熟悉ECharts/HTML/CSS/JavaScript/TypeScript/Node.js等Web前端技术，了解前端管理和构建工具：git、npm、webpack，有6个月的前端开发实习经验。</div>
+              <div>2. 性格活泼开朗，具有良好的团队合作精神和沟通协作能力. 在工作中善于总结反省，责任意识和抗压能力强。</div>
             </div>
           </section>
           <section className='section-box'>
@@ -143,7 +148,7 @@ function App() {
             </ul>
           </section>
           <section className='section-box'>
-            <p className='title'> <Divider className='title-before' type='vertical' />工作经历</p>
+            <p className='title'> <Divider className='title-before' type='vertical' />实习经历</p>
             <ul>
               {workList.map(item => (
                 <li>
@@ -154,7 +159,11 @@ function App() {
                       <span className='period'>{item.year}</span>
                     </div>
                     <div className='info-text'>
-                      <p>{item.content}</p>
+                      {/* <p style={{lineHeight: '25px'}}>{item.content}</p> */}
+                      {item.content.split('\n').map(ele => (
+                          <div className='info-text'>{ele}</div>
+                        ))
+                      }
                     </div>
                   </div>
                 </li>
@@ -168,43 +177,48 @@ function App() {
                 projectList.map(item => (
                   <li>
                     <div className='content-text project-list'>
-                      <div className='info-text'>
-                        <span style={{fontWeight: 600, marginRight: '30px'}}>{item.projectName}</span>
-                        <span>{item.job}</span>
-                        <span className='period'>{item.year}</span>
-                      </div>
-                      {item.companyName &&
+                      <div className='project-content'>
                         <div className='info-text'>
-                          <span>所属公司：{item.companyName}</span>
+                          <span style={{fontWeight: 600, marginRight: '30px'}}>{item.projectName}</span>
+                          <span>{item.job}</span>
+                          <span className='period'>{item.year}</span>
                         </div>
-                      }
-                      <div className='info-text'>
-                        <p className='s-title'>项目描述：</p>
-                        <p>{item.content}</p>
-                      </div>
-                      <div className='info-text'>
-                        <p className='s-title'>项目职责：</p>
-                        <p>{item.do}</p>
-                      </div>
-                      <div className='info-text'>
-                        <p>{item.technology}</p>
-                      </div>
-                      {item.difficulties &&
+                        {item.companyName &&
+                          <div className='info-text'>
+                            <span>所属公司：{item.companyName}</span>
+                          </div>
+                        }
                         <div className='info-text'>
-                          <p>{item.difficulties}</p>
-                        </div>                      
-                      }
-                      {item.codeName &&
-                      <div className='info-text code'>
-                        <p>{item.codeName}: </p>
-                         <img src={item.imgUrl} style={{width: '100px', height: '100px'}}/>
-                      </div>}
-                      {item.projectAddress && 
-                        <div className='info-text'>
-                          <p>项目链接：</p>
-                          <p>{item.projectAddress}</p>
+                          <p className='s-title'>项目描述：</p>
+                          <p>{item.content}</p>
                         </div>
-                      }
+                        <div className='info-text'>
+                          <p className='s-title'>项目职责：</p>
+                          <p>{item.do}</p>
+                        </div>
+                        <div className='info-text'>
+                          <p>{item.technology}</p>
+                        </div>
+                        {/* {item.difficulties &&
+                          <div className='info-text'>
+                            <p>{item.difficulties}</p>
+                          </div>                      
+                        } */}
+                        {item.projectAddress && 
+                          <div className='info-text'>
+                            <p>项目链接：</p>
+                            <p>{item.projectAddress}</p>
+                          </div>
+                        }
+                      </div>
+                      <div className='code-area'>
+                        {item.codeName &&
+                          <div className='info-text code'>
+                            <p className='codeName'>{item.codeName}: </p>
+                            <img src={item.imgUrl} style={{width: '100px', height: '100px'}}/>
+                          </div>
+                        }
+                      </div>
                     </div>
                   </li>
                 ))
