@@ -41,23 +41,23 @@ function App() {
   const projectList = [
     {
       projectName: '重医一院互联网医院',
-      companyName: '浙江扁鹊健康科技有限公司',
+      companyName: '',
       year: '2022/10 - 至今',
       job: '前端开发',
       content: '重庆医科大学附属第一医院PC端后台管理系统以及微信小程序患者端和医护端。',
-      do: '1. 负责后台管理系统的医生排班和运营活动管理专区的需求开发；\n2. 负责微信小程序患者端的线上挂号问诊的需求开发；\n3. 负责微信小程序医护端的医生开方以及药师审方的功能实现；',
-      technology: '采用技术：umi、uni-app、dva；',
+      do: '1. 负责开发后台系统中的医生排班和运营活动管理功能，封装公共组件；\n2. 负责为患者端小程序集成环信IM，实现线上问诊功能；\n3. 负责医护端的医生开方以及药师审方的功能实现；',
+      technology: '采用技术：uni-app、umi、dva；',
       difficulties: '项目难点：B端和C端采用不同的技术栈；线上问诊处理逻辑复杂；',
-      codeName: '重医一院互联网医院微信小程序患者端二维码',
+      codeName: '重医一院互联网医院患者端二维码',
       imgUrl: cfywechatimg,
     },
     {
       projectName: '鹊有其药(支付宝小程序/H5）',
-      companyName: '浙江扁鹊健康科技有限公司',
+      companyName: '',
       year: '2022/10 - 2023/01',
       job: '前端开发',
       content: '该项目向患者提供厚普医药的新药试验招募信息。患者可选择与自身条件相符的试验项目进行报名，并在报名记录中查看自己的报名进度。',
-      do: '1. 负责鹊有其药支付宝小程序/H5版本的首页、报名表、报名记录等模块开发；\n2. 负责对接第三方免登录报名；\n3. 负责前端埋点收集用户行为数据，配合产品经理统计PV/UV；',
+      do: '1. 负责首页、报名表、报名记录模块的跨端兼容开发；\n2. 负责对接第三方免登录报名；\n3. 负责前端埋点收集用户行为数据，编写埋点批量上报脚本提高埋点登记的效率和准确率；',
       technology: '采用技术：Taro；',
       difficulties: '项目难点：跨端多平台兼容；',
       codeName: '鹊有其药支付宝小程序二维码',
@@ -123,10 +123,13 @@ function App() {
             </div>
           </section>
           <section className='section-box'>
-            <p className='title'> <Divider className='title-before' type='vertical' />个人优势</p>
+            <p className='title'> <Divider className='title-before' type='vertical' />个人能力</p>
             <div className='content-text'>
-              <div className='info-text'>1. 熟悉React和Vue前端框架，熟悉ECharts/HTML/CSS/JavaScript/TypeScript/Node.js等Web前端技术，了解前端管理和构建工具：git、npm、webpack，有6个月的前端开发实习经验。</div>
-              <div>2. 性格活泼开朗，具有良好的团队合作精神和沟通协作能力，在工作中善于总结反省，责任意识和抗压能力强。</div>
+              <div className='info-text skill'>1. 熟悉使用React和Vue前端框架进行模块开发;</div>
+              <div className='info-text skill'>2. 熟悉使用HTML/CSS/JavaScript/TypeScript完成页面制作；</div>
+              <div className='info-text skill'>3. 了解使用Node.js搭建本地服务器;</div>
+              <div className='info-text skill'>4. 了解使用Echarts生成数据可视化图表。</div>
+              <div className='info-text skill'>5. 了解前端管理和构建工具：git、npm、webpack；</div>
             </div>
           </section>
           <section className='section-box'>
@@ -224,6 +227,12 @@ function App() {
                 ))
               }
             </ul>
+          </section>
+          <section className='section-box'>
+            <p className='title'> <Divider className='title-before' type='vertical' />性格特点</p>
+            <div className='content-text'>
+              <div>性格活泼开朗，具有良好的团队合作精神和沟通协作能力，在工作中善于总结反省，责任意识和抗压能力强。</div>
+            </div>
           </section>
         </div>
       </div>

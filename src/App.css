@@ -95,7 +95,7 @@
   font-size: 14px;
 }
 .content-text.project-list {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
@@ -153,6 +153,9 @@ li .info-text {
 
 .info-text {
   margin-bottom: 6px;
+}
+.info-text.skill{
+  margin-bottom: 3px;
 }
 .info-text p {
   margin: 0;
