@@ -45,9 +45,9 @@ function App() {
       year: '2022/10 - 至今',
       job: '前端开发',
       content: '重庆医科大学附属第一医院PC端后台管理系统以及微信小程序患者端和医护端。',
-      do: '1. 负责开发后台系统中的医生排班和运营活动管理功能，封装公共组件；\n2. 负责为患者端小程序集成环信IM，实现线上问诊功能；\n3. 负责医护端的医生开方以及药师审方的功能实现；',
+      do: '1. 负责后台系统的医生排班和运营活动管理的需求开发, 封装公共组件；\n2. 负责微信小程序患者端的线上挂号问诊的需求开发；\n3.  负责微信小程序医护端的医生开方以及药师审方的功能实现；',
       technology: '采用技术：uni-app、umi、dva；',
-      difficulties: '项目难点：B端和C端采用不同的技术栈；线上问诊处理逻辑复杂；',
+      // difficulties: '1.封装公共组件； 2.封装websocket实现即时通讯；',
       codeName: '重医一院互联网医院患者端二维码',
       imgUrl: cfywechatimg,
     },
@@ -57,9 +57,9 @@ function App() {
       year: '2022/10 - 2023/01',
       job: '前端开发',
       content: '该项目向患者提供厚普医药的新药试验招募信息。患者可选择与自身条件相符的试验项目进行报名，并在报名记录中查看自己的报名进度。',
-      do: '1. 负责首页、报名表、报名记录模块的跨端兼容开发；\n2. 负责对接第三方免登录报名；\n3. 负责前端埋点收集用户行为数据，编写埋点批量上报脚本提高埋点登记的效率和准确率；',
+      do: '1. 负责首页、报名表、报名记录模块的开发；\n2. 负责对接第三方免登录报名；\n3. 负责前端埋点收集用户行为数据， 负责前端埋点收集用户行为数据，编写埋点批量上报脚本提⾼埋点登记的效率和准确率；',
       technology: '采用技术：Taro；',
-      difficulties: '项目难点：跨端多平台兼容；',
+      // difficulties: '1.编写脚本批量上报前端埋点，完善埋点平台的删除和编辑功能；',
       codeName: '鹊有其药支付宝小程序二维码',
       imgUrl: qyqyimg,     
     },
@@ -126,10 +126,10 @@ function App() {
             <p className='title'> <Divider className='title-before' type='vertical' />个人能力</p>
             <div className='content-text'>
               <div className='info-text skill'>1. 熟悉使用React和Vue前端框架进行模块开发;</div>
-              <div className='info-text skill'>2. 熟悉使用HTML/CSS/JavaScript/TypeScript完成页面制作；</div>
+              <div className='info-text skill'>2. 熟悉使用HTML/CSS/JavaScript/TypeScript完成页面制作;</div>
               <div className='info-text skill'>3. 了解使用Node.js搭建本地服务器;</div>
-              <div className='info-text skill'>4. 了解使用Echarts生成数据可视化图表。</div>
-              <div className='info-text skill'>5. 了解前端管理和构建工具：git、npm、webpack；</div>
+              <div className='info-text skill'>4. 了解使用Echarts生成数据可视化图表;</div>
+              <div className='info-text skill'>5. 了解前端管理和构建工具：git、npm、webpack;</div>
             </div>
           </section>
           <section className='section-box'>
@@ -202,11 +202,12 @@ function App() {
                         <div className='info-text'>
                           <p>{item.technology}</p>
                         </div>
-                        {/* {item.difficulties &&
+                        {item.difficulties &&
                           <div className='info-text'>
+                            <p className='s-title'>项目难点：</p>
                             <p>{item.difficulties}</p>
                           </div>                      
-                        } */}
+                        }
                         {item.projectAddress && 
                           <div className='info-text'>
                             <p>项目链接：</p>
